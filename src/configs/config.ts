@@ -11,10 +11,10 @@ module.exports = {
     host: process.env.DB_POSTGRESQL_HOST as string,
     dialect: 'postgres' as Dialect,
     logging: false as boolean,
-    // dialectOptions: {
-    //   ssl: {
-    //     rejectUnauthorized: false,
-    //     ca: process.env.PRODUCTION_DB_POSTGRESQL_CERTIFICATE,
-    //   }
-    // }
+    dialectOptions: {
+      ssl: {
+        rejectUnauthorized: false,
+        ca: process.env.PRODUCTION_DB_POSTGRESQL_CERTIFICATE,
+      }
+    }
 };
