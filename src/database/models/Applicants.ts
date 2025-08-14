@@ -41,7 +41,7 @@ export default (sequelize: Sequelize, dataTypes: typeof DataTypes) => {
       job_id: { type: dataTypes.UUID, allowNull: false },
       full_name: { type: dataTypes.STRING, allowNull: false },
       email: { type: dataTypes.STRING, allowNull: false },
-      status: { type: dataTypes.ENUM('PENDING', 'REJECTED', 'APPROVED'), allowNull: false, defaultValue: 'PENDING' },
+      status: { type: dataTypes.STRING, allowNull: false, defaultValue: 'PENDING' },
       message: { type: dataTypes.TEXT, allowNull: true, defaultValue: null },
       cover_letter: { type: dataTypes.STRING, allowNull: true, defaultValue: null },
       resume: { type: dataTypes.STRING, allowNull: false },

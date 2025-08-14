@@ -8,7 +8,7 @@ module.exports = {
       job_id: { type: DataTypes.UUID, allowNull: false, references: { model: 'Jobs', key: 'id' }, onUpdate: 'CASCADE', onDelete: 'CASCADE' },
       full_name: { type: DataTypes.STRING, allowNull: false },
       email: { type: DataTypes.STRING, allowNull: false },
-      status: { type: DataTypes.ENUM('PENDING', 'REJECTED', 'APPROVED'), allowNull: false, defaultValue: 'PENDING' },
+      status: { type: DataTypes.STRING, allowNull: false, defaultValue: 'PENDING' },
       message: { type: DataTypes.TEXT, allowNull: true },
       cover_letter: { type: DataTypes.STRING, allowNull: true, defaultValue: null },
       resume: { type: DataTypes.STRING, allowNull: false },

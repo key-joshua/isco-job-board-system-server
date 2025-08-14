@@ -41,7 +41,7 @@ export default (sequelize: Sequelize, dataTypes: typeof DataTypes) => {
       password: { type: dataTypes.STRING, allowNull: true },
       is_google: { type: dataTypes.BOOLEAN, defaultValue: false },
       is_verified: { type: dataTypes.BOOLEAN, defaultValue: false },
-      role: { type: dataTypes.ENUM('ADMIN', 'APPLICANT'), allowNull: false, defaultValue: 'APPLICANT' },
+      role: { type: dataTypes.STRING, allowNull: false, defaultValue: 'APPLICANT' },
       created_at: { field: 'created_at', type: dataTypes.DATE, allowNull: false, defaultValue: dataTypes.NOW },
       updated_at: { field: 'updated_at', type: dataTypes.DATE, allowNull: false, defaultValue: dataTypes.NOW },
     }, { sequelize, modelName: 'Users', tableName: 'Users', timestamps: true, underscored: true });
